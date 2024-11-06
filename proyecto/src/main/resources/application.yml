@@ -1,0 +1,27 @@
+server:
+  port: 8081
+  error:
+    include-message: always
+#Configuracion de spring
+spring:
+  spring:
+    jpa:
+      hibernate:
+        ddl-auto: update
+
+  #Configuracion de migracion
+  flyway:
+    enabled: true
+    baselineVersion: 1
+    locations:
+      classpath: db/migration
+    sqlMigrationSuffixes: .sql
+    baselineOnMigrate: true
+    sqlMigrationPrefix: V
+    schemas: public
+
+  datasource:
+    url: jdbc:postgresql://kala.db.elephantsql.com:5432/tpdqukvt?socketTimeout=3
+    username: tpdqukvt
+    password: VlyLA6yRHjdh5YUJmELFyKi5O4QaNTSX
+    driverClassName: org.postgresql.Driver
