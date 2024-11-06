@@ -12,5 +12,9 @@ class Event {
 
     var eventName: String? = null
     var description: String? = null
-    var address : String? = null
+    var address: String? = null
+
+    @ManyToOne
+    @JoinColumn(name = "organizer_id")
+    var organizer: Organizer? = null  // Relación con Organizer
 }

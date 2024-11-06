@@ -5,7 +5,6 @@ import jakarta.validation.constraints.NotNull
 
 class EventDto {
 
-
     @NotNull(message = "Event name is required ")
     @NotBlank(message = "Event name is required")
     var eventName: String? = null
@@ -17,4 +16,6 @@ class EventDto {
     @NotNull(message = "Address is required ")
     @NotBlank(message = "Address is required")
     var address: String? = null
+
+    var organizerId: Long? = null
 }
